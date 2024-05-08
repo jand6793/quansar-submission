@@ -74,7 +74,7 @@ def setup_car():
     # Create a new camera view and attach it to the QCar
     hcamera = QLabsFreeCamera(qlabs)
     hcamera.spawn()
-    qcar.possess()
+    # qcar.possess()
 
     QLabsRealTime().start_real_time_model(rtmodels.QCAR)
 

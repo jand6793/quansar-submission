@@ -14,8 +14,9 @@ from helper_funcs import (
 from enums import Cls
 
 
-STOP_SIGN_MINIMUM_HEIGHT = 65
-RED_LIGHT_MINIMUM_WIDTH = 35
+STOP_SIGN_MINIMUM_HEIGHT = 64
+RED_LIGHT_MINIMUM_WIDTH = 22
+STOP_SIGN_DURATION = 3
 
 
 def main(perception_queue: multiprocessing.Queue, command_queue: multiprocessing.Queue):
@@ -34,7 +35,7 @@ def main(perception_queue: multiprocessing.Queue, command_queue: multiprocessing
                         send_stop(command_queue)
                         # wait for duration
                         t1 = time.time()
-                        while time.time() - t1 <= 5:
+                        while time.time() - t1 <= STOP_SIGN_DURATION:
                             if queue_has_items(perception_queue):
                                 # consume unneeded observations
                                 get_perception(perception_queue)

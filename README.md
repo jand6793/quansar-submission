@@ -5,6 +5,8 @@ Team members: Ashwin Krishnakumar, Andrew Jandernoa, Emmanuel Bolarinwa, Seng Du
 
 Faculty advisor: Professor Girma Tewolde, ECE Department, Kettering University.
 
+Faculty advisor: Associate Professor Diane Peters, ME Department, Kettering University.
+
 ## Setup
 Run `pip install -r requirements.txt`
 
